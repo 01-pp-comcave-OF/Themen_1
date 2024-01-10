@@ -42,11 +42,11 @@ JS ist eine untypisierte Sprache!
 
 /* Variablen vs. Konstanten in JS */
 
-let test;  // Deklaration
-test = "hi"; // Wertzuweisung (initialisierung)
-test = "hello"
-console.log("inhalt: " + test); // Ausgabe
+// let test;  // Deklaration
+// test = "hi"; // Wertzuweisung (initialisierung)
+// test = "hello"
+// console.log("inhalt: " + test); // Ausgabe
 
-const test2 = "Hi";
-console.log("inhalt: " + test2); // Ausgabe
+// const test2 = "Hi";
+// console.log("inhalt: " + test2); // Ausgabe
 
