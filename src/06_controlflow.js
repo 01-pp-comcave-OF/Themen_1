@@ -100,3 +100,20 @@ isJohnEqual = (ageJohn == ageMark);
 //         console.log("Jane macht etwas anderes")
 //         break;
 // }
+
+/********  Fallunterscheidung / SWITCH|CASE 2 *******/
+
+const cond = true;
+const value = 2;
+
+switch (cond) {
+    case (value == 1):
+       console.log("value hat den wert 1."); 
+        break;
+    case (value == 2):
+        console.log("value hat den wert 2."); 
+        break;
+    default:
+        console.log("value hat einen anderen wert."); 
+        break;
+}
