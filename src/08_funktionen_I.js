@@ -77,6 +77,8 @@ function getString(firstName, familyName) {
     const GAP = " ";
     let outputStr = "Hallo, " + firstName + GAP + familyName + "!"
     return outputStr;  // return schickt die Daten an den call
+    console.log("hi"); // wont work (after return command)
+
 }
 
 // // 1. FunktionalitätM: string output
