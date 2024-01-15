@@ -10,23 +10,27 @@
 4. Ausgabe in Konsole : check!
 */
 
+const ERROR_STR_DIV = "Davision durch Null ist nicht definiert";
+
 // module: division a / b |  test:
 output (divide(4,2));
 output (divide(3,2));
 output (divide(3,-2));
 output (divide(0,2));
 output (divide(3,0));
+output (divide(0,0));
 function divide(a,b){
 
-	if (b !== 0) {  // b ungleich 0
-		return a / b;
-	}else {
-		return "Davision durch Null ist nicht definiert";
-	}
+if(b == 0){
+	return ERROR_STR_DIV; // Ausnahme
 }
 
-
-
+	if (b !== 0) {  // b ungleich 0
+		return a / b; // reguläres Verhalten
+	}else {
+		return ERROR_STR_DIV; // Ausnahme
+	}
+}
 
 // module: multiplication a * b |  test:
 // output(multiply(3,2));
@@ -59,6 +63,7 @@ function divide(a,b){
 // module: output | test:
 // output("hello");
 // output(2);
+
 function output(outputData) {
 	console.log(outputData);
 }
