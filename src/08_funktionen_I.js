@@ -54,7 +54,6 @@
 // 03a. Vorbereitung -Trennen der Funktionalitäten
 // Postulat: one function = one job (uncle Bob)
 // SRP single responsibility principle
-
 // ausgabeNamenSRP("Max","Mütze");
 
 function ausgabeNamenSRP(firstName, familyName){  // Parameter
@@ -68,8 +67,8 @@ function ausgabeNamenSRP(firstName, familyName){  // Parameter
 }
 
 /***** Funktionen 03b *****/
-
 // 1. FunktionalitätM: string composing
+
 
 output(getString("Max", "Mütze"));
 
@@ -78,13 +77,14 @@ function getString(firstName, familyName) {
     let outputStr = "Hallo, " + firstName + GAP + familyName + "!"
     return outputStr;  // return schickt die Daten an den call
     console.log("hi"); // wont work (after return command)
-
 }
 
-// // 1. FunktionalitätM: string output
+// 1. FunktionalitätM: string output
 // output("hi")
 // output(2)
 // output(true)
 function output(outputData) {
     console.log(outputData);
 }
+
+
