@@ -1,4 +1,3 @@
-
 /* Die Satzbau-Maschine | Arrays */
 
 /**
@@ -7,16 +6,51 @@
  */
 
 /*** 02. Theorie: Array */
-let arr;
-// arr = new Array();  // konstruktor
-arr = []; // Literal
-arr = [2,11,7,8,10,3];
+// let arr;
+// // arr = new Array();  // Konstruktor
+// arr = []; // Literal
+// arr = [2,11,7,8,10];
 
 // output(arr);
-// output(arr.length); // Anzahl der Elements
-// output(arr[0]);  // Index 0 (1.Pos. im Array)
-// output(arr[4]);
-// output(arr[arr.length-1]);
+// output(arr.length); // Anzahl der Elemente
+// output(arr[0]); // Index 0 (1. Pos. im Array)
+// output(arr[arr.length-1]); // letze Pos. / allgemein
+
+
+
+/* 02a. Theorie: Schleifen (for-schleife) */
+/* For -Schleifen als allg. Wiederholungs-Struktur */
+
+// Inkrement (untere Grenze --> obere Grenze)
+// for (let i = 0; i < 5; i++ ) 
+// {
+//     output(i);
+// }
+
+// Dekrement (obere Grenze --> untere Grenze)
+// for (let i = 0; i < 5 ; i--) 
+// {
+//     output(i);
+// }
+
+// Inkrement (var. Schrittweite)
+// for (let i = 10; i <= 100; i+= 5) 
+// {
+//     output(i);
+// }
+
+/* 02b. For-Schleife für Array-Index (Iteration)*/
+
+// let arr = ["Ich","bin","die","coole","Maxine","Mützerich"];
+// for (let i = 0; i < arr.length; i++) 
+// {
+//     // output(i);
+//     output(arr[i]);
+// }
+
+
+
+
 
 /**
  *   PRAXIS
@@ -36,17 +70,18 @@ function getSentence(word1,word2,word3,word4,word5,word6) {
                 word3 + GAP +
                 word4 + GAP +
                 word5 + GAP +
-                word6 +
+                word6 + 
                 PUNCT;
 
     return str;
 }
+
 /*** 01a. Funktionalität mit Array 1 */
 // Kritik | Überlegung
 // word1,word2, .... wordN :: Semantische Struktur
 // arr[0],arr[1] ... arr[n-1] :: Numerische Struktur (0,1,2,3 ... n)
 // --> Transformation semantisches Problem --> numerisches Problem
-output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
+// output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr(arr) {
     const GAP = " ";
     const PUNCT = ".";
@@ -57,11 +92,26 @@ function getSentenceArr(arr) {
                 arr[4] + GAP +
                 arr[5] + 
                 PUNCT;
- 
+
     return str;
 }
 
+/*** 01b. Funktionalität mit Array 2  */
+// Transponierung:  untereinander ---> nebeneinander
+// Helge Schneider: Anananandereihung ...
+output(getSentenceArr(["Ich","bin","die","coole","Maxine","Mützerich"]));
+function getSentenceArr(arr) {
+    const GAP = " ";
+    const PUNCT = ".";
+    let str;
 
+    for (let i = 0; i < arr.length; i++) 
+    {
+        output(arr[i]);
+    }
+
+    return str;
+}
 
 
 
@@ -71,5 +121,4 @@ function getSentenceArr(arr) {
 function output(outputStr) {
     console.log(outputStr);
 }
-
 
